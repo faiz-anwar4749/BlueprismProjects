@@ -1,0 +1,190 @@
+﻿<process name="Notepad" version="1.0" bpversion="6.9.0.26970" narrative="Win32App" byrefcollection="true" type="object" runmode="Exclusive" preferredid="d2a665d2-16c2-433b-b4e0-9ee1c6e8a485">
+  <appdef>
+    <element name="Application Root">
+      <id>5a8bca84-b2f1-44be-aa38-c47e64f91d43</id>
+      <type>Application</type>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="d90dbf97-445e-4f03-b8d9-49496830d9d9" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="c2ff341e-601d-4f71-bd39-2ceeb99618d7" type="Normal" published="False">
+    <name>Action 1</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="67851eba-e615-494b-b160-4cf82e859a3a" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-240" w="90" h="30" />
+    <onsuccess>96c91734-2c22-40e6-af3d-6cfeb1e37e80</onsuccess>
+  </stage>
+  <stage stageid="96c91734-2c22-40e6-af3d-6cfeb1e37e80" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="180" w="90" h="30" />
+  </stage>
+  <stage stageid="299adecb-f95d-4bfb-b229-271792e17401" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>System.Data</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="6876be49-afd3-4dee-b78b-d3f543be9fb7" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>d90dbf97-445e-4f03-b8d9-49496830d9d9</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="03fefa08-d363-497f-8bfe-750103ef28bc" name="Start" type="Start">
+    <subsheetid>d90dbf97-445e-4f03-b8d9-49496830d9d9</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>96af8ac0-a1c9-487e-89fc-d5f103a461ef</onsuccess>
+  </stage>
+  <stage stageid="96af8ac0-a1c9-487e-89fc-d5f103a461ef" name="End" type="End">
+    <subsheetid>d90dbf97-445e-4f03-b8d9-49496830d9d9</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="843b733a-42ab-4a32-bdad-fdaf31a24ee8" name="Action 1" type="SubSheetInfo">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="8087fdca-38d8-4b37-888a-c3094eb4db36" name="Start" type="Start">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <loginhibit />
+    <display x="15" y="-120" w="90" h="30" />
+    <onsuccess>c9a2eda8-4eb8-42dc-95d8-6f3e7c9d34b5</onsuccess>
+  </stage>
+  <stage stageid="6bc3836e-cf47-4518-a1a5-4b836af498b6" name="End" type="End">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <loginhibit />
+    <display x="15" y="105" w="90" h="30" />
+  </stage>
+  <stage stageid="fc9fd90d-77b4-4b7d-bb11-823a2d9b5dd8" name="" type="Note">
+    <subsheetid>d90dbf97-445e-4f03-b8d9-49496830d9d9</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="6bb185a2-4496-4fa0-9b96-df75e7862566" name="" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="c9a2eda8-4eb8-42dc-95d8-6f3e7c9d34b5" name="Append Line to Notepad" type="Action">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-45" w="90" h="30" />
+    <inputs>
+      <input type="text" name="File Name" friendlyname="File Name" narrative="The full path of the text file to append to" expr="&quot;C:\Users\User\Desktop\C# RPA\RPA\BLUEPRISM\BlueprismProjects\Notepad\Sample.txt&quot;" />
+      <input type="text" name="Text" friendlyname="Text" narrative="The text to append to the file" expr="&quot;Hi. Adding text to Sample.txt&quot;" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" friendlyname="Success" narrative="True if successful" stage="" />
+      <output type="text" name="Message" friendlyname="Message" narrative="An error message if unsuccessful" stage="" />
+    </outputs>
+    <onsuccess>0ad50c73-aefc-413e-ab93-e0a54de3caee</onsuccess>
+    <resource object="Utility - File Management" action="Append to Text File" />
+  </stage>
+  <stage stageid="f5a1a43c-64c0-4aea-99bf-40323640e656" name="Sample Collection" type="Collection">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <loginhibit />
+    <display x="-150" y="15" w="90" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="No" type="number" />
+      <field name="Name" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="No" type="number" value="10001" />
+        <field name="Name" type="text" value="Shikhar Dhawan" />
+      </row>
+      <row>
+        <field name="No" type="number" value="10002" />
+        <field name="Name" type="text" value="Rohit Sharma" />
+      </row>
+      <row>
+        <field name="No" type="number" value="10003" />
+        <field name="Name" type="text" value="Virat Kohli" />
+      </row>
+      <row>
+        <field name="No" type="number" value="10004" />
+        <field name="Name" type="text" value="KL Rahul" />
+      </row>
+      <row>
+        <field name="No" type="number" value="10005" />
+        <field name="Name" type="text" value="Shreyas Iyer" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="0ad50c73-aefc-413e-ab93-e0a54de3caee" name="Loop Start1" type="LoopStart">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <loginhibit />
+    <display x="165" y="-45" />
+    <onsuccess>34a15b7a-4787-42cc-8d9d-9b7c19091058</onsuccess>
+    <groupid>3579f45f-c934-4f9a-b776-bf767589100d</groupid>
+    <looptype>ForEach</looptype>
+    <loopdata>Sample Collection</loopdata>
+  </stage>
+  <stage stageid="830a0586-2abf-4e8d-9884-498d86a61870" name="Loop End1" type="LoopEnd">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <loginhibit />
+    <display x="165" y="105" />
+    <onsuccess>6bc3836e-cf47-4518-a1a5-4b836af498b6</onsuccess>
+    <groupid>3579f45f-c934-4f9a-b776-bf767589100d</groupid>
+  </stage>
+  <stage stageid="34a15b7a-4787-42cc-8d9d-9b7c19091058" name="Write data from Coll to Notepad" type="Action">
+    <subsheetid>c2ff341e-601d-4f71-bd39-2ceeb99618d7</subsheetid>
+    <loginhibit onsuccess="true" />
+    <display x="165" y="30" w="90" h="30" />
+    <inputs>
+      <input type="text" name="File Name" friendlyname="File Name" narrative="The full path of the text file to append to" expr="&quot;C:\Users\User\Desktop\C# RPA\RPA\BLUEPRISM\BlueprismProjects\Notepad\Sample.txt&quot;" />
+      <input type="text" name="Text" friendlyname="Text" narrative="The text to append to the file" expr="[Sample Collection.No]&amp;&quot; ----- &quot;&amp;[Sample Collection.Name]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" friendlyname="Success" narrative="True if successful" stage="" />
+      <output type="text" name="Message" friendlyname="Message" narrative="An error message if unsuccessful" stage="" />
+    </outputs>
+    <onsuccess>830a0586-2abf-4e8d-9884-498d86a61870</onsuccess>
+    <resource object="Utility - File Management" action="Append to Text File" />
+  </stage>
+</process>
